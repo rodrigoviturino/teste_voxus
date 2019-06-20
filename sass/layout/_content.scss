@@ -1,0 +1,217 @@
+#main {
+    background: url('img/bg-page.png') bottom;
+    background-color: #F5F7FA;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+
+    @include device(s) {
+        background-size: unset;
+    }
+
+    @include device(m) {
+        background-size: unset;
+    }
+
+    .content {
+        max-width: 630px;
+        margin: 0 auto;
+        padding-bottom: 166px;
+
+        @include device(s){
+            padding-bottom: 80px;
+        }
+
+        &__header {
+            text-align: center;
+            margin-bottom: 73px;
+    
+            @include device(s) {
+                margin-bottom: 57px;
+            }
+    
+            h2 {
+                font-weight: 500;
+                line-height: 42px;
+                margin-top: 60px;
+                padding-bottom: 17px;
+                color: #2D3A40;
+                @include tipo-1(32);
+            
+                @include device(s) {
+                    font-size: 24px;
+                    line-height: 32px;
+                    letter-spacing: -1px;
+                    margin-top: 50px;
+                }
+    
+            }
+            p {
+                color: #748296;
+                @include tipo-1(14);
+    
+                @include device(s) {
+                    font-size: 13px;
+                    line-height: 26px;
+                }
+            }
+        }
+        
+        // Formulario
+        &__form {
+            background: #FFFFFF;
+            box-shadow: 0px 4px 40px rgba(116, 130, 150, 0.2);
+            border-radius: 3px;
+            padding: 27px 0 96px 0;
+
+
+            form {
+                max-width: 280px;
+                margin: 0 auto;
+
+
+                input, select {
+                    display: block;
+                    width: 100%;
+                    background: #FFFFFF;
+                    border: 1px solid rgba(116, 130, 150, 0.2);
+                    box-sizing: border-box;
+                    border-radius: 3px;
+                    padding: 11px 15px 11px 15px;
+                    margin-bottom: 30px;
+                    @include tipo-1(16);
+
+                    &::-webkit-input-placeholder {
+                        letter-spacing: 0.0125em;
+                        color: rgba(45, 58, 64, 0.3);
+                    }
+
+                    &:focus {
+                        border: solid 1px #326FFF;
+                    } 
+                }
+
+                select {
+                    padding: 11px 0 11px 15px;
+                    color: rgba(45, 58, 64, 0.3);
+                    @include tipo-1(16);
+
+                    option {
+                        color: rgba(45, 58, 64, 0.3);
+                        @include tipo-1(16);
+                    }
+                }
+
+                button {
+                    background: #14E298;
+                    border-radius: 3px;
+                    color: #fff;
+                    display: block;
+                    font-weight: 500;
+                    padding: 11px 20px;
+                    border: none;
+                    margin: 0 auto;
+                    @include tipo-1(16);
+
+                    &:hover {
+                        background-color: #23F7AB;
+                        transition: .8s;
+                    }
+                }
+
+               
+
+            }
+
+            &__phone {
+                display: flex;
+
+                & select {
+                    width: 30% !important;
+                    border-right: none !important;
+                    border-top-right-radius: 0px !important;
+                    border-bottom-right-radius: 0px !important;
+                }
+
+                & input {
+                    padding: 11px 0 11px 15px !important;
+                    border-top-left-radius: 0px !important;
+                    border-bottom-left-radius: 0px !important;
+                }
+
+                #flag {
+                    padding-bottom: 8px;
+                }
+            }
+
+            // Animation label input
+            &__inputBox {
+                position: relative;
+
+                input {
+                    // width: 100%;
+                    // position: relative;
+                    background: #FFFFFF;
+                    border: 1px solid rgba(116, 130, 150, 0.2);
+                    box-sizing: border-box;
+                    border-radius: 3px;
+                    padding: 11px 15px 11px 15px;
+                    margin-bottom: 30px;
+                    transition: all .3s ease;
+                    font-weight: thick;
+                    @include tipo-1(16);
+                }
+
+                label {
+                    position: absolute;
+                    padding: 11px 0 11px 15px;
+                    opacity: .3;
+                    cursor: text;
+                    transition: all .4s;
+                    color: #333;
+                    @include tipo-1(16);
+                }
+
+                .label-up {
+                    top:-10px;
+                    left: 10px;
+                    padding: 0 15px 0 10px ;
+                    opacity:1;
+                    background-color: #fff;
+                    display: block;
+                    color: rgba(45, 58, 64, 0.3);
+                    cursor : default;
+                  }
+
+                  input:focus {
+                    border:1px solid #326FFF;
+
+                 }
+
+                 input:focus {
+
+                    input::-webkit-input-placeholder {
+                        color: transparent;
+                     }
+                 }
+
+                
+
+            }
+
+        }        
+    }
+
+    #name-error,#email-error,#phone-error ,#company-error ,#site-error {
+        position: relative;
+        margin-bottom: 10px;
+        background: #F0175C;
+        color: #fff;
+        border-radius: 0px 0px 4px 4px;
+        top: -31px;
+        left: 0;
+        padding: 5px 13px;
+    }
+
+}

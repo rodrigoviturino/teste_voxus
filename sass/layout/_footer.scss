@@ -1,0 +1,41 @@
+.footer {
+    
+    ul {
+        display: flex;
+        border-top: 2px solid rgba(0, 0, 0, 0.1);
+        padding: 22px 0 48px 0;
+
+        @include device(s) {
+            flex-direction: column;
+            padding: 20px 0 45px 0;
+        }
+        
+        li {
+            align-self: center;
+            @include device(s){
+                align-self: unset;
+            }
+            &+li {
+                padding: 0 20px;
+
+                @include device(s){
+                    padding: 10px 0 0 0;
+                }
+            }
+
+            &:nth-child(3) {
+                border-right: 1px solid rgba(0, 0, 0, 0.1);
+                border-left: 1px solid rgba(0, 0, 0, 0.1);
+                @include device(s){
+                    border: none;
+                }
+            }
+            a {
+                font-weight: normal;    
+                color: #748296;
+                text-decoration: none;
+                @include tipo-1(14);
+            }
+        }
+    }
+}

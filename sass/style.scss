@@ -1,0 +1,13 @@
+// Gerais
+@import 'base/reset';
+// @import 'normalize/import-now';
+@import 'grid/grid';
+@import 'base/variaveis_e_mixins';
+@import 'geral';
+
+// Layout
+@import 'layout/header';
+@import 'layout/content';
+@import 'layout/footer';
+
+

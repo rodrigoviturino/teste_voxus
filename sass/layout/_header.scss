@@ -1,0 +1,8 @@
+.header {
+    background-color: #fff;
+    &__logo {
+        display: flex;
+        justify-content: flex-start;
+        padding: 17px 0;
+    }
+}
