@@ -29,7 +29,6 @@ $(document).ready(function () {
                 required: true,
                 minlength: 14,
                 maxlength:20,
-                phone:true
             },
             email: {
                 email: true,
@@ -37,8 +36,7 @@ $(document).ready(function () {
                 required:true
             },
             company: {
-                required:true,
-                equalTo: true
+                required:true
             },
             site: {
                 required:true,
@@ -47,7 +45,7 @@ $(document).ready(function () {
 
         },
         submitHandler: function(form) {
-            alert('Sucesso');
+            
             form.submit();
         }
     });

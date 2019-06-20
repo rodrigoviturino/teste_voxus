@@ -412,7 +412,7 @@ img {
 #main .content__form__inputBox input:focus input::-webkit-input-placeholder {
   color: transparent;
 }
-#main #name-error, #main #email-error, #main #phone-error, #main #company-error, #main #site-error {
+#main #name-error, #main #email-error, #main #id_phone-error, #main #company-error, #main #site-error {
   position: relative;
   margin-bottom: 10px;
   background: #F0175C;
