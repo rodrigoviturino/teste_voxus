@@ -355,6 +355,22 @@ img {
   background-color: #23F7AB;
   transition: 0.8s;
 }
+#main .content__form form .btn {
+  background: #2D3A40;
+  border-radius: 3px;
+  color: #fff;
+  display: block;
+  font-weight: 500;
+  padding: 11px;
+  border: none;
+  margin: 0 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+}
+#main .content__form form .btn:hover {
+  background-color: #333;
+  transition: 0.8s;
+}
 #main .content__form__phone {
   display: flex;
 }

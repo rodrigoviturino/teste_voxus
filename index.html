@@ -32,7 +32,7 @@
         <div class="container">
             <span id="msg"></span>
             <div class="content__form">
-                <form action="#" id="form-content" method="POST">
+                <form action="index.html" id="form-content" method="get">
 
                     <div class="content__form__label__float">
                         <input type="text" class="input-nome" name="name" id="nome" placeholder=" "/>
@@ -77,8 +77,8 @@
                         <option value="">Não se aplica</option>
                     </select>
                     
-                    <button id="" class="btn-form">Experimentar gratuitamente</button>
-                    <!-- <button id="obrigado" class="btn-hidden">Obrigado!</button> -->
+                    <button type="submit" id="" class="btn-form">Experimentar gratuitamente</button>
+                    <!-- <a id="obrigado" class="btn">Obrigado!</a> -->
                 </form>
             </div>
         
@@ -115,39 +115,6 @@
 <script src="js/additional-methods.min.js"></script>
 <script src="js/main.js"></script>
 
-<script>
-$(document).ready(function () {
-    $('#form-content').validate({
-        // Regras
-        rules: {
-            name: {
-                required:true
-            },
-
-            phone: {
-                required: true
-            },
-            email: {
-                email: true,
-                remote:true,
-                required:true
-            },
-            company: {
-                required:true
-            },
-            site: {
-                required:true,
-                url:true
-            },
-
-        },
-        submitHandler: function(form) {
-            
-            form.submit();
-        }
-    });
-});
-</script>
 
 </body>
 </html>

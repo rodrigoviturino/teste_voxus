@@ -118,9 +118,25 @@
                         background-color: #23F7AB;
                         transition: .8s;
                     }
+
                 }
 
-               
+                .btn {
+                    background: #2D3A40;
+                    border-radius: 3px;
+                    color: #fff;
+                    display: block;
+                    font-weight: 500;
+                    padding: 11px;
+                    border: none;
+                    margin: 0 20px;
+                    @include tipo-1(16);
+
+                    &:hover {
+                        background-color: #333;
+                        transition: .8s;
+                    }
+                }
 
             }
 
