@@ -32,36 +32,38 @@
         <div class="container">
             <span id="msg"></span>
             <div class="content__form">
-                <form action="#" id="form-content">
-                    <div class="content__form__inputBox">
+                <form action="#" id="form-content" method="POST">
+
+                    <div class="content__form__label__float">
+                        <input type="text" class="input-nome" name="name" id="nome" placeholder=" "/>
                         <label for="name">Nome completo</label>
-                        <input type="text" class="input-nome" name="name"> 
                     </div>
+
                     <div class="content__form__phone">
                         <select id="flag">
                             <option value="">bra</option>
                         </select>
-                        <div class="content__form__inputBox">
+                        <div class="content__form__label__float" id="divPhone">
+                            <input type="text" class="input-phone" name="phone" id="id_phone" placeholder=" ">
                             <label for="phone">Telefone</label>
-                            <input type="text" class="input-phone" name="phone" id="id_phone">
                         </div>
                     </div>
 
-                    <div class="content__form__inputBox">
+                    <div class="content__form__label__float">
+                        <input type="text" class="input-andress" name="email" placeholder=" ">
                         <label for="andress">Endereço de e-mail</label>
-                        <input type="text" class="input-andress" name="email">
-                        <span></span>
+                        
                     </div>
 
-                    <div class="content__form__inputBox">
+                    <div class="content__form__label__float">
+                        <input type="text" class="input-company" name="company" placeholder=" ">
                         <label for="company">Nome da empresa</label>
-                        <input type="text" class="input-company" name="company">
-                        <span style="display: block;"></span>
+                        
                     </div>
 
-                    <div class="content__form__inputBox">
+                    <div class="content__form__label__float">
+                        <input type="text" value="" class="input-site" name="site" placeholder=" " >
                         <label for="site">URL do Site</label>
-                        <input type="text" class="input-site" name="site">
                         <span></span>
                     </div>
 
@@ -75,7 +77,8 @@
                         <option value="">Não se aplica</option>
                     </select>
                     
-                    <button type="submit" id="btn-submit" class="btn-form">Experimentar gratuitamente</button>
+                    <button id="" class="btn-form">Experimentar gratuitamente</button>
+                    <!-- <button id="obrigado" class="btn-hidden">Obrigado!</button> -->
                 </form>
             </div>
         
@@ -111,6 +114,40 @@
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/additional-methods.min.js"></script>
 <script src="js/main.js"></script>
+
+<script>
+$(document).ready(function () {
+    $('#form-content').validate({
+        // Regras
+        rules: {
+            name: {
+                required:true
+            },
+
+            phone: {
+                required: true
+            },
+            email: {
+                email: true,
+                remote:true,
+                required:true
+            },
+            company: {
+                required:true
+            },
+            site: {
+                required:true,
+                url:true
+            },
+
+        },
+        submitHandler: function(form) {
+            
+            form.submit();
+        }
+    });
+});
+</script>
 
 </body>
 </html>

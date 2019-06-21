@@ -13,7 +13,10 @@ $fonte-1:'Roboto', sans-serif;
 // Mixins Tipografia
 @mixin tipo-1($size){
     font-family: $fonte-1;
-    @if $size == 14 {
+    @if $size == 12 {
+        font-size: em(12);
+    }
+    @else if $size == 14 {
         font-size: em(14);
         line-height: (26px);
     }
